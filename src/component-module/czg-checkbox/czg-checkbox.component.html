@@ -1,0 +1,13 @@
+<span style="display: inline-block;">
+  <div fxLayoutAlign="start center" fxLayoutGap="6px">
+    <span class="check_box" [class.disabled]="disabled" [style.width.px]="size" [style.height.px]="size"
+      [style.backgroundColor]="checked?activeColor:defaultColor" fxLayoutAlign="center center" (click)="click()">
+      <!-- <i class="iconfont icon-gou" [style.fontSize.px]="fontSize" [style.color]="fontColor" [style.opacity]="checked?1:0>
+      </i> -->
+      <i class="fa fa-check" [style.fontSize.px]="fontSize" [style.color]="fontColor" [style.opacity]="checked?1:0">
+      </i>
+    </span>
+    <span *ngIf="label" class="check_label">{{label}}</span>
+    <ng-content></ng-content>
+  </div>
+</span>

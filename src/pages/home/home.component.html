@@ -1,0 +1,25 @@
+<div class="body">
+  <czg-in-view>
+    <ng-template [ngIf]>
+
+      <p>
+        home works!
+      </p>
+    </ng-template>
+  </czg-in-view>
+
+  <div>
+    <czg-switch></czg-switch>
+  </div>
+
+  <czg-tree>
+    <ng-template #treeNode let-item="item">
+      <span>{{item.name}}</span>
+    </ng-template>
+
+  </czg-tree>
+
+</div>
+<div #mydiv style="background-color: blue; padding: 40px;" [style.height.px]="height">
+
+</div>

@@ -1,0 +1,34 @@
+<div class="body" fxLayout="column" fxLayoutGap="20px">
+  <czg-in-view>
+    <ng-template [ngIf]>
+      <p> home works! </p>
+    </ng-template>
+  </czg-in-view>
+
+  <div>
+    <czg-switch></czg-switch>
+  </div>
+
+  <div fxLayoutAlign="start center" fxLayoutGap="30px">
+    <ng-container *ngFor="let item of checkList1">
+    <czg-checkbox [(model)]='checkListSelect' [value]="item.value" [label]="item.label"
+    (modelChange)="_consoleLog($event)"></czg-checkbox>
+    </ng-container>
+  </div>
+
+  <czg-tree>
+    <ng-template #treeNode let-item="item">
+    <!-- <ng-template treeNode='header' let-item="item"> -->
+      <span>{{item.name}}</span>
+    </ng-template>
+
+  </czg-tree>
+
+  <div style="height: 200px; background-color: red;">
+    <czg-scroll-div>
+      <div #mydiv style="background-color: blue;" [style.height.px]="300">
+      </div>
+      <p>Long content</p>
+    </czg-scroll-div>
+  </div>
+</div>
